@@ -2,6 +2,7 @@
 title: "Prompt injection в RAG: атака через ваш собственный документ"
 date: 2026-09-16
 description: "Как отравленный PDF обходит типовые защиты LLM-ассистента и что реально помогает: изоляция, экранирование, policy-фильтры."
+image: "img/blog/prompt-injection.svg"
 tags: ["безопасность","rag","prompt-injection","owasp-llm"]
 ---
 

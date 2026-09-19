@@ -1,0 +1,22 @@
+- title: "Дообучение"
+  description: "SFT/LoRA открытых LLM под вашу предметную область и стиль."
+  icon: bi bi-mortarboard
+  link: /services/fine-tuning/
+- title: "Оптимизация инференса"
+  description: "Квантование, дистилляция, спекулятивный декодинг. Меньше GPU — быстрее ответы."
+  icon: bi bi-lightning-charge
+  link: /services/inference-optimization/
+- title: "RAG и агенты"
+  description: "Поиск по вашим документам с цитатами и защитой от prompt injection."
+  icon: bi bi-diagram-3
+  link: /services/rag-agents/
+- title: "Безопасность ML"
+  description: "Аудит конвейеров по OWASP LLM Top 10 и MITRE ATLAS."
+  icon: bi bi-shield-lock
+  link: /services/mlsec-audit/
+- title: "Своё железо"
+  description: "Разворачиваем локально: от workstation до кластера K8s и ARM SBC."
+  icon: bi bi-cpu
+- title: "Прозрачность"
+  description: "Бенчмарки до/после, model card, воспроизводимый пайплайн."
+  icon: bi bi-clipboard-data

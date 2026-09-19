@@ -1,0 +1,103 @@
+baseURL = "https://engineering-ai.site/"
+title = "Engineering AI"
+author = "Engineering AI"
+languageCode = "ru-RU"
+DefaultContentLanguage = "ru"
+enableInlineShortcodes = true
+theme = "tella"
+enableRobotsTXT = true
+
+[services]
+  [services.googleAnalytics]
+    # не используем GA — Яндекс.Метрика подключена через layouts/partials/analytics.html
+
+[params]
+showBlog = true
+mainSections = ['blog']
+googleFonts = true
+description = "Оптимизация и обучение моделей ИИ: квантование, дистилляция, RAG, инференс на своём железе."
+
+  [params.logo]
+  main = "img/logo/logo.svg"
+  alt = "Engineering AI Logo"
+  size = "h-12"
+
+  [params.site]
+  name = "Engineering AI"
+
+  [params.icon]
+  bootstrap = true
+
+  [params.share]
+  enable = false
+
+  [params.homepage_meta_tags]
+  meta_description = "Engineering AI — оптимизация и обучение моделей искусственного интеллекта. Квантование, дистилляция, RAG, инференс на своём железе, аудит безопасности ML."
+  meta_og_title = "Engineering AI"
+  meta_og_type = "website"
+  meta_og_url = "https://engineering-ai.site"
+  meta_og_image = ""
+  meta_og_description = "Оптимизация и обучение моделей ИИ под ключ."
+  meta_twitter_card = "summary"
+
+[menu]
+  [[menu.main]]
+  identifier = "services"
+  name = "Услуги"
+  url = "/services/"
+  weight = 1
+
+  [[menu.main]]
+  identifier = "blog"
+  name = "Статьи"
+  url = "/blog/"
+  weight = 2
+
+  [[menu.main]]
+  identifier = "about"
+  name = "О нас"
+  url = "/about/"
+  weight = 3
+
+  [[menu.main]]
+  identifier = "contact"
+  name = "Контакты"
+  url = "/contact/"
+  weight = 4
+
+  # Footer Menu — без внешних ссылок на GitHub
+  [[menu.footer]]
+  name = "Главная"
+  url = "/"
+  weight = 1
+
+  [[menu.footer]]
+  name = "Услуги"
+  url = "/services/"
+  weight = 2
+
+  [[menu.footer]]
+  name = "Контакты"
+  url = "/contact/"
+  weight = 3
+
+  [[menu.footer]]
+  name = "Email"
+  url = "mailto:info@engineering-ai.site"
+  pre = "<i class='bi bi-envelope text-2xl'></i>"
+  weight = 4
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+ordered = true
+
+[security.exec]
+allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^npx$', '^node$', '^npm$', '^tailwindcss$']

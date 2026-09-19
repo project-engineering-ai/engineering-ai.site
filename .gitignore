@@ -1,0 +1,6 @@
+public/
+resources/_gen/
+node_modules/
+package-lock.json.bak
+.hugo_build.lock
+hugo_stats.json

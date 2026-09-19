@@ -1,0 +1,22 @@
+{
+    "Title": "Engineering AI — Блогролл",
+    "PostsToShow": 100,
+    "CssUrl": "https://unpkg.com/mvp.css",
+    "Pages": {
+        "Blogroll": {
+            "Title": "Блогролл Engineering AI",
+            "Subtitle": "Блоги об ИБ, ИИ и инфраструктуре, которые мы читаем."
+        },
+        "Latest": {
+            "Title": "Свежие записи",
+            "Subtitle": "Последние 100 материалов из блогов в нашем ролле."
+        }
+    },
+    "Feeds": [
+        "https://project-ai.site/index.xml",
+        "https://krebsonsecurity.com/feed/",
+        "https://securelist.com/feed/",
+        "https://www.bleepingcomputer.com/feed/",
+        "https://www.microsoft.com/en-us/security/blog/feed/"
+    ]
+}

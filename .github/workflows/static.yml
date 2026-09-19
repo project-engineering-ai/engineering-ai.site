@@ -28,6 +28,8 @@ jobs:
         run: |
           mkdir -p _site
           rsync -a --exclude=.git --exclude=.github --exclude=_site ./ _site/
+      - name: Inject Yandex.Metrika (idempotent)
+        run: python3 scripts/inject_metrika.py --cid 112548628 --root _site
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

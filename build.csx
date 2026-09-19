@@ -95,7 +95,7 @@ new MetalsharpProject()
         ["cssUrl"] = config.CssUrl
     }))
     .UseLiquidTemplates("Templates")
-    .AddOutput("Static", @".\")
+    .AddOutput("Static", ".")
     .Build(new BuildOptions()
     {
         OutputDirectory = "output",

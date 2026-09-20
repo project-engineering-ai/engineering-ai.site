@@ -3,7 +3,7 @@
         <ul class="text-center list-none text-white space-y-6">
             {{ range .Site.Menus.main }}
             <li class="p-2 transform transition-transform hover:scale-110">
-                <a href="{{ .URL | safeURL }}" class="text-4xl font-semibold hover:text-gray-300 transition-colors">
+                <a href="{{ .URL | safeURL }}"{{ if eq .Identifier "langswitch" }} data-lang-switch="force"{{ end }} class="text-4xl font-semibold hover:text-gray-300 transition-colors">
                     <span>{{ .Name }}</span>
                 </a>
             </li>
@@ -27,7 +27,7 @@
             </div>
             <div class="text-lg">
                 {{ range .Site.Menus.main }}
-                <a href="{{ .URL | safeURL }}"
+                <a href="{{ .URL | safeURL }}"{{ if eq .Identifier "langswitch" }} data-lang-switch="force"{{ end }}
                     class="duration-200 block mt-4 lg:inline-block lg:mt-0 text-black hover:opacity-60 mr-8">
                     {{ .Name }}
                 </a>

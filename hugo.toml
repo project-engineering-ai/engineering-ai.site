@@ -1,21 +1,22 @@
 baseURL = "https://engineering-ai.site/"
 title = "Engineering AI"
 author = "Engineering AI"
-languageCode = "ru-RU"
+locale = "ru-RU"
 DefaultContentLanguage = "ru"
+defaultContentLanguageInSubdir = false
 enableInlineShortcodes = true
 theme = "tella"
 enableRobotsTXT = true
 
+# не используем GA — Яндекс.Метрика подключена через layouts/partials/analytics.html
 [services]
   [services.googleAnalytics]
-    # не используем GA — Яндекс.Метрика подключена через layouts/partials/analytics.html
 
 [params]
 showBlog = true
 mainSections = ['blog']
 googleFonts = true
-description = "Оптимизация и обучение моделей ИИ: квантование, дистилляция, RAG, инференс на своём железе."
+summaryLength = 70
 
   [params.logo]
   main = "img/logo/logo.svg"
@@ -31,61 +32,149 @@ description = "Оптимизация и обучение моделей ИИ: �
   [params.share]
   enable = false
 
-  [params.homepage_meta_tags]
-  meta_description = "Engineering AI — оптимизация и обучение моделей искусственного интеллекта. Квантование, дистилляция, RAG, инференс на своём железе, аудит безопасности ML."
-  meta_og_title = "Engineering AI"
-  meta_og_type = "website"
-  meta_og_url = "https://engineering-ai.site"
-  meta_og_image = ""
-  meta_og_description = "Оптимизация и обучение моделей ИИ под ключ."
-  meta_twitter_card = "summary"
+# ---------------- RU (корень, каноническая версия) ----------------
+[languages.ru]
+label = "Русский"
+locale = "ru-RU"
+contentDir = "content"
+weight = 1
 
-[menu]
-  [[menu.main]]
-  identifier = "services"
-  name = "Услуги"
-  url = "/services/"
-  weight = 1
+  [languages.ru.params]
+  description = "Оптимизация и обучение моделей ИИ: квантование, дистилляция, RAG, инференс на своём железе."
 
-  [[menu.main]]
-  identifier = "blog"
-  name = "Статьи"
-  url = "/blog/"
-  weight = 2
+    [languages.ru.params.homepage_meta_tags]
+    meta_description = "Engineering AI — оптимизация и обучение моделей искусственного интеллекта. Квантование, дистилляция, RAG, инференс на своём железе, аудит безопасности ML."
+    meta_og_title = "Engineering AI"
+    meta_og_type = "website"
+    meta_og_url = "https://engineering-ai.site"
+    meta_og_image = ""
+    meta_og_description = "Оптимизация и обучение моделей ИИ под ключ."
+    meta_twitter_card = "summary"
 
-  [[menu.main]]
-  identifier = "about"
-  name = "О нас"
-  url = "/about/"
-  weight = 3
+  [languages.ru.menu]
+    [[languages.ru.menu.main]]
+    identifier = "services"
+    name = "Услуги"
+    url = "/services/"
+    weight = 1
 
-  [[menu.main]]
-  identifier = "contact"
-  name = "Контакты"
-  url = "/contact/"
-  weight = 4
+    [[languages.ru.menu.main]]
+    identifier = "blog"
+    name = "Статьи"
+    url = "/blog/"
+    weight = 2
 
-  # Footer Menu — без внешних ссылок на GitHub
-  [[menu.footer]]
-  name = "Главная"
-  url = "/"
-  weight = 1
+    [[languages.ru.menu.main]]
+    identifier = "about"
+    name = "О нас"
+    url = "/about/"
+    weight = 3
 
-  [[menu.footer]]
-  name = "Услуги"
-  url = "/services/"
-  weight = 2
+    [[languages.ru.menu.main]]
+    identifier = "contact"
+    name = "Контакты"
+    url = "/contact/"
+    weight = 4
 
-  [[menu.footer]]
-  name = "Контакты"
-  url = "/contact/"
-  weight = 3
+    # Footer Menu — без внешних ссылок на GitHub
+    [[languages.ru.menu.main]]
+    identifier = "langswitch"
+    name = "EN"
+    url = "/en/"
+    weight = 9
 
-  [[menu.footer]]
-  name = "Email"
-  url = "mailto:info@engineering-ai.site"
-  pre = "<i class='bi bi-envelope text-2xl'></i>"
-  weight = 4
+    [[languages.ru.menu.footer]]
+    name = "Главная"
+    url = "/"
+    weight = 1
+
+    [[languages.ru.menu.footer]]
+    name = "Услуги"
+    url = "/services/"
+    weight = 2
+
+    [[languages.ru.menu.footer]]
+    name = "Контакты"
+    url = "/contact/"
+    weight = 3
+
+    [[languages.ru.menu.footer]]
+    name = "Email"
+    url = "mailto:info@engineering-ai.site"
+    pre = "<i class='bi bi-envelope text-2xl'></i>"
+    weight = 4
+
+# ---------------- EN (/en/) ----------------
+[languages.en]
+label = "English"
+locale = "en-US"
+contentDir = "content.en"
+weight = 2
+
+  [languages.en.params]
+  description = "AI model optimization and training: quantization, distillation, RAG, on-prem inference."
+
+    [languages.en.params.homepage_meta_tags]
+    meta_description = "Engineering AI — training and optimization of AI models. Quantization, distillation, RAG, on-prem inference, ML security audits."
+    meta_og_title = "Engineering AI"
+    meta_og_type = "website"
+    meta_og_url = "https://engineering-ai.site/en"
+    meta_og_image = ""
+    meta_og_description = "End-to-end AI model training and optimization."
+    meta_twitter_card = "summary"
+
+  # Меню НЕ наследуются между языками — дублируем с /en/
+  [languages.en.menu]
+    [[languages.en.menu.main]]
+    identifier = "services"
+    name = "Services"
+    url = "/en/services/"
+    weight = 1
+
+    [[languages.en.menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/en/blog/"
+    weight = 2
+
+    [[languages.en.menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/en/about/"
+    weight = 3
+
+    [[languages.en.menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/en/contact/"
+    weight = 4
+
+    [[languages.en.menu.main]]
+    identifier = "langswitch"
+    name = "РУС"
+    url = "/"
+    weight = 9
+
+    [[languages.en.menu.footer]]
+    name = "Home"
+    url = "/en/"
+    weight = 1
+
+    [[languages.en.menu.footer]]
+    name = "Services"
+    url = "/en/services/"
+    weight = 2
+
+    [[languages.en.menu.footer]]
+    name = "Contact"
+    url = "/en/contact/"
+    weight = 3
+
+    [[languages.en.menu.footer]]
+    name = "Email"
+    url = "mailto:info@engineering-ai.site"
+    pre = "<i class='bi bi-envelope text-2xl'></i>"
+    weight = 4
 
 [taxonomies]
 category = "categories"

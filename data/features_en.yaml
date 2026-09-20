@@ -1,0 +1,22 @@
+- title: "Fine-tuning"
+  description: "SFT/LoRA of open LLMs for your domain and style."
+  icon: bi bi-mortarboard
+  link: /en/services/fine-tuning/
+- title: "Inference optimization"
+  description: "Quantization, distillation, speculative decoding. Fewer GPUs — faster answers."
+  icon: bi bi-lightning-charge
+  link: /en/services/inference-optimization/
+- title: "RAG and agents"
+  description: "Search over your documents with citations and prompt-injection protection."
+  icon: bi bi-diagram-3
+  link: /en/services/rag-agents/
+- title: "ML security"
+  description: "Pipeline audits against OWASP LLM Top 10 and MITRE ATLAS."
+  icon: bi bi-shield-lock
+  link: /en/services/mlsec-audit/
+- title: "Own hardware"
+  description: "We deploy locally: from a workstation to a K8s cluster and ARM SBCs."
+  icon: bi bi-cpu
+- title: "Transparency"
+  description: "Before/after benchmarks, model card, reproducible pipeline."
+  icon: bi bi-clipboard-data

@@ -5,7 +5,7 @@
                 {{- $slideKey := cond (eq site.Language.Lang "en") "slide_en" "slide" -}}
                 {{ range default hugo.Data.slide (index hugo.Data $slideKey) }}
                 <li class="splide__slide">
-                    <img src="{{ .image }}" alt="{{ .alt }}">
+                    <img src="/{{ .image | relURL | strings.TrimPrefix "/" }}" alt="{{ .alt }}">
                     <div class="s-fade-txt">
                         <h1 class="text-4xl font-medium {{ or .color "text-white" }}">{{ .title }}</h1>
                     </div>
@@ -14,7 +14,7 @@
             {{ else }}
                 {{ range .Site.Data.slide }}
                 <li class="splide__slide">
-                    <img src="{{ .image }}" alt="{{ .alt }}">
+                    <img src="/{{ .image | relURL | strings.TrimPrefix "/" }}" alt="{{ .alt }}">
                     <div class="s-fade-txt">
                         <h1 class="text-4xl font-medium {{ or .color "text-white" }}">{{ .title }}</h1>
                     </div>
